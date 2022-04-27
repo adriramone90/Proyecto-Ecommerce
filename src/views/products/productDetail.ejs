@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include("../partials/head")%>
+<body>
+    <%-include("../partials/header")%>
+
+    <main class="back-grad">
+        <section >
+            <article>
+                <div class="containerCaja1-2" >
+                    <div class="primerCaja" >
+                        <h2><%=productoSolicitado.name%></h2>
+                        <div class="container carousel-edit1">
+                          <div id="carouselExampleIndicators" class="carousel slide d-flex justify-content-center" data-bs-ride="carousel" >
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <% if (productoSolicitado.image[2]) {%>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                              <%}%>
+                            </div>
+                            <div class="carousel-inner carousel-img">
+                              <div class="carousel-item active">
+                                <img src="/img/products/<%=productoSolicitado.image[0]%>" class="d-block carousel-img" object-fit="cover">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="/img/products/<%=productoSolicitado.image[1]%>" class="d-block carousel-img" object-fit="cover">
+                              </div>
+                              <% if(productoSolicitado.image[2]) {%>
+                                <div class="carousel-item">
+                                    <img src="/img/products/<%=productoSolicitado.image[2]%>" class="d-block carousel-img" object-fit="cover">
+                                </div>
+                              <%}%>  
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                        </div>
+                        
+                        <div class="tercerCaja"> 
+                                <input type="button" value="Comprar ya!">
+                                <input type="button" value="Agregar al Carrito">
+                        </div>
+                    </div>
+                        
+                    <div class="segundaCaja">
+                        <h2>Detalles</h2>
+                        <p>-<%=productoSolicitado.description%> </p>
+                        <p class="precio">$<%=productoSolicitado.price%></p>
+                        <% if(productoSolicitado.ingredients){ %>
+                            <p>Ingredientes:</p>
+                            <ul>
+                                <% for(let i = 0; i < productoSolicitado.ingredients.length; i++) { %>
+                                <li><%= productoSolicitado.ingredients[i]%></li>
+                                <%}%>
+                            </ul>
+                         <%}%>
+                        
+                        <p><%=productoSolicitado.coment%></p>
+                    </div>
+                </div>
+
+                
+
+                <div class="cuartaCaja">
+                    <h2>Comentarios</h2>
+                    <div>
+                        <p><strong>De: MiguelAngel</strong> <br> muy buen te la verdad!</p><hr>
+                        <p><strong>De: GomezAgustin </strong><br> me gusto el te y su presentacion, tambien la puntualidad en la que me llego! lo recomiendo</bt></p><hr>
+                        <p><strong>De: AnaliaRossi </strong> <br> qur rico te! lastima el pequeño inconveniente que hubo con la forma de pago pero lo demas todo bien</p><hr>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <%-include("../partials/footer")%>
+    
+</body>
+</html>

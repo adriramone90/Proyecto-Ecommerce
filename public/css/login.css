@@ -1,0 +1,134 @@
+@import url("style.css");
+@import url("formulario.css");
+section.login.input_check-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.8rem
+    
+    }
+    
+    section.login{
+    max-width: 375px;
+    }
+:root{
+    --verde: #98DBC6;
+    --gris: #7C7E82;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+
+main.login{
+    font-size: larger;
+    height: 100%;
+    min-height: 469px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    font-family: "baloo 2";
+    background: none;
+}
+a{
+color: black;
+text-decoration: none;
+font-size: 1.3rem;
+
+}
+ 
+ main.login h2{
+ margin-bottom: 1rem;
+ text-align: center;
+ font-weight: 400;
+}
+
+main.login hr{
+    background-color:#FFC4E1;
+    height: 2px;
+    margin-bottom: 1rem;
+    width: 100%;
+
+}
+main.login section.lg-container{
+ border-radius: 15px;
+ padding: 1rem;
+ width: 100%;
+ background-color: rgba(226, 226, 226, 0.685);
+ box-shadow: 0px 2px 2px #000;
+ 
+}
+
+
+main.login lg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main.login  .input-container,
+main.login   div.btn-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: "Baloo 2";
+}
+
+main.login span.error-message{
+    color: red;
+    font-size: 10px;
+    margin: 0 auto;
+    display: none;
+ 
+}
+main.login  input.input-style{
+  border: none;
+  border-radius: 1rem;
+  height: 30px;
+  padding: 7px;
+  margin-bottom: 3px;
+}
+main.login  input:focus{
+    outline: none;
+}
+
+main.login  label{
+    font-size: 14px;
+    
+}
+button.btn{
+    background-color: transparent;
+    width: 150px;
+    border: 2px solid;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 16px;
+    color: var(--negro);
+    outline: none;
+    border-color: var(--rosaClaro);
+    box-shadow: 0 0 40px 40px var(--rosaClaro) inset;
+    transition: box-shadow 0.1s ease-in-out;
+    margin: 0 auto;
+    
+}
+
+button.btn:hover{
+    box-shadow: 0 0 10px 0 var(--rosaClaro) inset, 0 0 10px 4px var(--rosaClaro);
+}
+
+
+span#center{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+span#olvidoContrasenia{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}

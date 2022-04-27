@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "nombre": "Taiel", 
+        "apellido": "Fernandez",  
+        "email": "taielfernandezjara@gmail.com",
+        "pass": "mundo9023",
+        "categoria": "",
+        "imagen": []
+    },
+    {
+        "id": 2,
+        "nombre": "Agostina", 
+        "apellido": "Dangelo",  
+        "email": "agos12dangelo@hotmail.com",
+        "pass": "3423432432",
+        "categoria": "",
+        "imagen": []
+    },
+    {
+        "id": 3,
+        "nombre": "Gonzalo", 
+        "apellido": "Barreiro",  
+        "email": "gonzalo_10@hotmail.com",
+        "pass": "31231231",
+        "categoria": "",
+        "imagen": []
+    },
+    {
+        "id": 4,
+        "nombre": "Ezequiel", 
+        "apellido": "Paredes pacheco",  
+        "email": "ezeparedesP@gmail.com",
+        "pass": "sadadsada",
+        "categoria": "",
+        "imagen": []
+    },
+    {
+        "id": 5,
+        "nombre": "Zaira", 
+        "apellido": "Rolon",  
+        "email": "zairaRolonGarcia@gmail.com",
+        "pass": "312j31",
+        "categoria": "",
+        "imagen": []
+    }
+]

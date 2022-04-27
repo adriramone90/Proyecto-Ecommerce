@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<%-include("./partials/head")%>
+
+<body>
+
+    <%-include("./partials/header")%>
+    <main class="back-grad">
+
+        <section>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/img/banner1.png" class="d-block w-100" alt="Promo1">
+              </div>
+              <div class="carousel-item">
+                <img src="/img/banner2.png" class="d-block w-100" alt="Promo2">
+              </div>
+              <div class="carousel-item">
+                <img src="/img/banner3.png" class="d-block w-100" alt="Promo3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+            <article class="back-grad">
+
+                <div class="container-products">
+                    <h3>EXTRA SALE!</h3>
+
+                    <% for( let i = 0; i <= 3; i++ ) { %>
+                        <div class="item-products">
+                            <a href="/producto/<%=productos[i].id%>">
+                                <img src="/img/products/<%=productos[i].image[0]%>" alt="Te Verde" class="img-products">
+                                <div>
+                                    <h4><%=productos[i].name%></h4>
+                                    <p class="offer">$<%=(productos[i].price + 150)%></p>
+                                    <p class="actual">$<%=productos[i].price%></p>
+                                </div>
+                            </a>
+                        </div>
+                    <% } %>
+
+                    <h3>PRODUCTOS DESTACADOS</h3>
+
+                    <% for( let i = 4; i <= 7; i++ ) { %>
+                        <div class="item-products">
+                            <a href="/producto/<%=productos[i].id%>">
+                                <img src="/img/products/<%=productos[i].image[0]%>" alt="Te Verde" class="img-products">
+                                <div>
+                                    <h4><%=productos[i].name%></h4>
+                                    <p class="actual">$<%=productos[i].price%></p>
+                                </div>
+                            </a>
+                        </div>
+                    <% } %>
+
+                </div>
+
+                <div class="medios-pago">
+                    <h3>PODES ABONAR CON ESTOS MEDIOS DE PAGO</h3>
+                    <div class="tarjeta">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <p>Tarjetas de crédito o débito</p>
+                        <p>Pagá en cuotas sin interés o hacelo al contado con tu tarjeta de débito.</p>
+                    </div>
+
+                    <hr>
+
+                    <div class="efectivo">
+                        <i class="fa-solid fa-money-bill-1-wave"></i>
+                        <p>¿Preferís pagar en efectivo?</p>
+                        <p>Cuando compres, te daremos un código para que puedas pagar en cualquier sucursal.</p>
+                    </div>
+                    <div class="formulario">
+                        <form action="index.html" method="get">
+                            <label for="newsletter">
+                                Dejanos tu mail para recibir todas las ofertas!
+                                <input type="email" name="email" id="newsletter" placeholder="Ingresa tu @mail">
+                            </label>
+                            <button type="submit" id="newsletter"> ENVIAR!</button>
+                        </form>
+                    </div>
+                </div>
+
+            </article>
+
+        </section>
+    </main>
+    <%-include("./partials/footer")%>
+
+</body>
+</html>

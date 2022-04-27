@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+    <%-include("../partials/headAdmin")%>
+<body>
+    <%-include("../partials/headerAdmin")%>
+    
+    <main class="addP">
+
+        <h2><%=postHeader%></h2>
+        <form action="/admin/productos/editar/<%-producto.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="inp-cont">
+                <label for="name">Nombre del producto</label>
+                <input type="text" name="name" value="<%=producto.name%>" id="name">
+            </div>
+            
+            <div class="inp-cont">
+                <label for="price">Precio</label>
+                <input type="number" name="price" value="<%=producto.price%>" id="price">
+            </div>
+            
+            <div class="inp-cont">
+                <label for="description">Descripción del producto</label>
+                <textarea name="description" id="description" cols="25" rows="10" ><%=producto.description%></textarea>
+            </div>
+
+            <% if (producto.ingredients) { %>
+                <div class="inp-cont">
+                    <label for="ingredients" class="label-ing">Editar ingredientes:</label>
+                    <div class="check-ing">
+                        <input type="text" name="ingredient1" value="<%= producto.ingredients[0]%>" class="ingrediente">
+                        <input type="text" name="ingredient2" value="<%= producto.ingredients[1]%>" class="ingrediente">
+                        <input type="text" name="ingredient3" value="<%= producto.ingredients[2]%>" class="ingrediente">
+                    </div>
+                </div>
+            <% } %>
+
+            <div class="inp-cont">
+                <label for="coment">Comentario adicional</label>
+                <textarea name="coment" id="coment" cols="25" rows="10" ><%=producto.coment%></textarea>
+            </div>
+            
+            <div class="inp-cont file-cont">
+                <label for="image"><i class="fa-solid fa-file-arrow-up"></i> Cargar Imagenes</label>
+                <input type="file" name="image" id="image">
+            </div>
+            
+            <div class="inp-cont ">
+                <button type="submit" class="btn-add">Guardar</button>
+            </div>
+        </form>
+
+        <div class="backTo">
+            <a href="/admin"><i class="fa-solid fa-circle-arrow-left"></i> Volver</a>
+        </div>
+    </main>
+
+    <%-include("../partials/footerAdmin")%>
+</body>
+</html>

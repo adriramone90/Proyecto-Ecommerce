@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+    <%-include("../partials/headAdmin")%>
+<body>
+    <%-include("../partials/headerAdmin")%>
+
+    <main class="addP">
+
+        <h2><%=postHeader%></h2>
+        <form action="/admin/productos" method="POST" enctype="multipart/form-data">
+            <div class="inp-cont">
+                <label for="name">Nombre del producto</label>
+                <input type="text" name="name" placeholder="Ej: Te Chino" id="name" value="<%= locals.old && old.name%>">
+                <% if (locals.errors && errors.name) { %>
+                    <div class="alert alert-danger" role="alert">
+                        <%=errors.name.msg%> 
+                    </div>
+                <% } %>
+                
+            </div>
+
+            <div class="inp-cont">
+                <label for="price">Precio</label>
+                <input type="number" name="price" placeholder="Ej: 500" id="price" value="<%= locals.old && old.price%>">
+                <% if (locals.errors && errors.price) { %>
+                    <div class="alert alert-danger" role="alert">
+                        <%=errors.price.msg%> 
+                    </div>
+                <% } %>
+            </div>
+
+            <div class="inp-cont">
+                <label for="description">Descripción del producto</label>
+                <textarea name="description" id="description" cols="25" rows="10" placeholder="Descripción detallada del producto"></textarea>
+                <% if (locals.errors && errors.description) { %>
+                    <div class="alert alert-danger" role="alert">
+                        <%=errors.description.msg%> 
+                    </div>
+                <% } %>
+            </div>
+
+            <div class="inp-cont">
+                <label for="ingredients" class="label-ing">Ingresar ingredientes:</label>
+                <div class="check-ing">
+                    <input type="text" name="ingredient1" placeholder="Ej: pétalos" class="ingrediente">
+                    <input type="text" name="ingredient2" placeholder="Ej: pétalos" class="ingrediente">
+                    <input type="text" name="ingredient3" placeholder="Ej: pétalos" class="ingrediente">
+                </div>
+            </div>
+
+            <div class="inp-cont">
+                <label for="coment">Comentario adicional</label>
+                <textarea name="coment" id="coment" cols="25" rows="10" placeholder="Comentario adicional sobre el producto"></textarea>
+            </div>
+
+            <div class="inp-cont file-cont">
+                <label for="image"><i class="fa-solid fa-file-arrow-up"></i> Cargar Imagenes</label>
+                <input type="file" name="image" id="image">
+                <% if (locals.errors && errors.image) { %>
+                    <div class="alert alert-danger" role="alert">
+                        <%=errors.image.msg%> 
+                    </div>
+                <% } %>
+            </div>
+
+            <div class="inp-cont">
+                <button type="submit" class="btn-add">Crear</button>
+            </div>
+        </form>
+
+        <div class="backTo">
+            <a href="/admin"><i class="fa-solid fa-circle-arrow-left"></i> Volver</a>
+        </div>
+    </main>
+
+    <%-include("../partials/footerAdmin")%>
+</body>
+</html>

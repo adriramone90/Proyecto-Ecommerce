@@ -1,0 +1,116 @@
+[
+    {
+        "id": 1,
+        "name": "Té negro en hebras cortas",
+        "weight": "Lata 65g",
+        "description": "Té negro en hebras cortas, cosechado y producido en Misiones, Argentina.",
+        "price": 350,
+        "ingredients": [
+            "Canela",
+            "Arandanos",
+            "Clavo de dolor",
+            "Ralladura de Naranja"
+        ],
+        "image": [
+            "te-negro.jpg",
+            "te-negro2.jpg",
+            "te-negro3.jpg"
+        ],
+        "coment": "Excelente mezcla de sabores para disfrutar de un rico te por la tarde!"
+    },
+    {
+        "id": 2,
+        "name": "Té verde en hebras cortas",
+        "weight": "Lata 65g",
+        "description": "Té verde en hebras cortas, cosechado y producido en Misiones, Argentina.",
+        "price": 350,
+        "ingredients": [
+            "Durazno",
+            "Pétalos de rosas amarillas",
+            "cardamomo",
+            "con aroma frutal"
+        ],
+        "image": [
+            "te-verde.jpg",
+            "te-verde2.jpg",
+            "te-verde3.jpg"
+        ],
+        "coment": "Excelente mezcla de sabores para disfrutar de un rico te por la tarde, de sabor dulce y delicado!"
+    },
+    {
+        "id": 3,
+        "name": "Té rojo en hebras cortas",
+        "weight": "Lata 65g",
+        "description": "Té rojo en hebras cortas, cosechado y producido en Misiones, Argentina.",
+        "price": 350,
+        "ingredients": [
+            "Hebras de Yunnan",
+            "Cacao",
+            "Coco",
+            "Vainilla",
+            "Con trozitos de Toffee"
+        ],
+        "image": [
+            "te-rojo.jpg",
+            "te-rojo2.jpg",
+            "te-rojo3.jpg"
+        ],
+        "coment": "Excelente mezcla de sabores, Dulce y entrador!"
+    },
+    {
+        "id": 4,
+        "name": "Tetera Artesanal de Cerámica",
+        "description": "Teteras de cerámica hechas a mano, Capacidad 1 litro. Combinable con set de cuencos. Inscripción: Iguazú",
+        "price": 1980,
+        "image": [
+            "tetera.jpg",
+            "tetera2.jpg",
+            "tetera3.jpg"
+        ],
+        "coment": "Hermosa tetera para disfrutar de un rico te en hebras"
+    },
+    {
+        "id": 5,
+        "name": "Cucharita de la Aldea",
+        "description": "Cucharita hecha en bambú o cedro, ideal para servir hebras o azúcar. Con ilustración Aldea de Iguazú.",
+        "price": 80,
+        "image": [
+            "cucharita-aldea.jpg",
+            "cucharita-aldea2.jpg"
+        ],
+        "coment": "Cucharita de calidad!"
+    },
+    {
+        "id": 6,
+        "name": "Infusor artesanal con cordón",
+        "description": "Infusor hecho a mano con fibras naturales.",
+        "price": 720,
+        "image": [
+            "infusor.jpg",
+            "infusor2.jpg"
+        ],
+        "coment": "Infusor estetico y de buena calidad! Sirve para todo tipo de tazas"
+    },
+    {
+        "id": 7,
+        "name": "Mielera de la Aldea",
+        "description": "Mielera en madera ideal para acompañar tus momentos de conexión con las hebras misioneras.",
+        "price": 90,
+        "image": [
+            "mielera.jpg",
+            "mielera2.jpg"
+        ],
+        "coment": "Excelente producto para disfrutar aún mas de nuestros tes"
+    },
+    {
+        "id": 8,
+        "name": "Cuenco de cerámica",
+        "description": "Cuenco de cerámica hecho a mano. Con inscripción Iguazú. Combinable con teteras.",
+        "price": 820,
+        "image": [
+            "cuenca.jpg",
+            "cuenca2.jpg"
+        ],
+        "coment": "Cuenco artesanal para las buenas energias"
+    }
+]
