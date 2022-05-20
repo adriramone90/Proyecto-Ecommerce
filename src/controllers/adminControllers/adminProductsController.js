@@ -5,7 +5,8 @@ module.exports = {
     addProduct: (req, res)=>{
         res.render("admin/products/addProducts",{
             titulo: "Nuevo producto",
-            postHeader: "Ingrese los datos del nuevo producto"
+            postHeader: "Ingrese los datos del nuevo producto",
+            session:req.session
         })
     },
     createProduct: (req,res)=>{
@@ -20,12 +21,19 @@ module.exports = {
                 lastId = producto.id;
             }
         });
+        let images = []
 
+        req.files.forEach((file)=>{
+            images.push(file.filename)
+        })
 
         let newProduct = {
-            ...req.body,
             id:lastId + 1,
-            image: req.file ? req.file.filename : "default.jpg",
+            name : req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            coment : req.body.coment,
+            image: req.files ? [...images] : ["default.jpg"],
             ingredients: [req.body.ingredient1,req.body.ingredient2,req.body.ingredient3]
         }
 
@@ -39,7 +47,8 @@ module.exports = {
                 titulo: "Nuevo producto",
                 postHeader: "Ingrese los datos del nuevo producto",
                 errors: errors.mapped(),
-                old: req.body
+                old: req.body,
+                session:req.session
             })
         }
 
@@ -53,9 +62,9 @@ module.exports = {
         res.render('admin/products/editProducts', {
             postHeader: "Editar Producto",
             titulo: "Edición",
-            producto
+            producto,
+            session:req.session
         })
-
 
     },
 
@@ -118,7 +127,8 @@ module.exports = {
         res.render('admin/resultAdmin',{
            titulo: `resultados de ${searchProduct}`,
            postHeader: `resultados de ${searchProduct}`,
-           productos: result
+           productos: result,
+           session:req.session
          })
     }
 }

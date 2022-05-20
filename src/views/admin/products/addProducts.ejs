@@ -31,7 +31,7 @@
 
             <div class="inp-cont">
                 <label for="description">Descripción del producto</label>
-                <textarea name="description" id="description" cols="25" rows="10" placeholder="Descripción detallada del producto"></textarea>
+                <textarea name="description" id="description" cols="25" rows="10" placeholder="Descripción detallada del producto"><%= (locals.old && old.description) ? old.description : ""%></textarea>
                 <% if (locals.errors && errors.description) { %>
                     <div class="alert alert-danger" role="alert">
                         <%=errors.description.msg%> 
@@ -42,9 +42,9 @@
             <div class="inp-cont">
                 <label for="ingredients" class="label-ing">Ingresar ingredientes:</label>
                 <div class="check-ing">
-                    <input type="text" name="ingredient1" placeholder="Ej: pétalos" class="ingrediente">
-                    <input type="text" name="ingredient2" placeholder="Ej: pétalos" class="ingrediente">
-                    <input type="text" name="ingredient3" placeholder="Ej: pétalos" class="ingrediente">
+                    <input type="text" name="ingredient1" value="<%= locals.old && old.ingredient1%>" placeholder="Ej: pétalos" class="ingrediente">
+                    <input type="text" name="ingredient2" value="<%= locals.old && old.ingredient2%>" placeholder="Ej: pétalos" class="ingrediente">
+                    <input type="text" name="ingredient3" value="<%= locals.old && old.ingredient3%>" placeholder="Ej: pétalos" class="ingrediente">
                 </div>
             </div>
 

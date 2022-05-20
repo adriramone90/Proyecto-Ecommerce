@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-AR">
     <%-include("../partials/head")%>
 <body>
 
@@ -12,28 +12,37 @@
         <section class="form-container register">
             <h2>Registrate</h2>
             <hr>
-            <form action="" method="">
+            <form action="/register" method="POST">
                 <div class="input-container">
-                    <input type="email" class="input-style" name="email" placeholder="Ingrese su email">
-                    <span class="error-message">Debe ingresar su email</span>
+                    <input type="email" class="input-style" name="email" placeholder="Ingrese su email" value=" <%=(locals.old && old.email) ? old.email : ""%>  ">
+                    <% if (locals.errors && errors.email) { %>
+                        <span class="error-message"> <%=errors.email.msg%>  </span>
+                    <% } %>
                 </div>
                 <div class="input-container">
                     <input type="password" class="input-style" name="pass" placeholder="Ingrese una contraseña">
-                    <span class="error-message">Debe ingresar su contraseña</span>
+                    <% if (locals.errors && errors.pass) { %>
+                        <span class="error-message"> <%=errors.pass.msg%>  </span>
+                    <% } %>
                 </div>
                 <div class="input-container">
                     <input type="password" class="input-style" name="pass2" placeholder="Confirmar contraseña">
-                    <span class="error-message">Debe re-ingresar su contraseña</span>
+                    <% if (locals.errors && errors.pass2) { %>
+                        <span class="error-message"> <%=errors.pass2.msg%></span>
+                    <% } %>
                 </div>
                 <div class="input_check-container">
-                    <label for="recordar"> Acepto los <a href="">términos y condiciones</a> <input type="checkbox" name="terms" id="recordar"></label>
-                    <span class="error-message">Debe aceptar los términos y condiciones</span>
+                    <label for="recordar"> Acepto los <a href="">términos y condiciones</a> 
+                    <input type="checkbox" name="terms" id="recordar"></label>
+                    <% if (locals.errors && errors.terms) { %>
+                        <span class="error-message"> <%=errors.terms.msg%></span>
+                    <% } %>
                 </div>
                 <div class="btn-container">
-                    <span class="error-message">Hubo un error en el registro</span>
+                    
                     <button type="submit" class="btn btn-submit">Registrate</button>
                 </div>
-                <span><a href="login.html">¿Ya tenes cuenta?Ingresá</a></span>
+                <span><a href="login">¿Ya tenes cuenta? Ingresá</a></span>
             </form>
     
         </section>

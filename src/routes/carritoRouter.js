@@ -3,6 +3,8 @@ const router = express.Router();
 
 const carritoController = require('../controllers/carritoController');
 
-router.get("/", carritoController.carrito); 
+const userSessionActive = require("../middlewares/userSessionOnline");
+
+router.get("/", userSessionActive ,carritoController.carrito); 
 
 module.exports = router;

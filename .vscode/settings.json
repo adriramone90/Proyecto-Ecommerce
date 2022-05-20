@@ -1,4 +1,5 @@
 {
     "editor.fontLigatures": false,
-    "editor.fontFamily": "'monospace', 'monospace', monospace"
+    "editor.fontFamily": "'monospace', 'monospace', monospace",
+    "docwriter.language": "Spanish"
 }

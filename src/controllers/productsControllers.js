@@ -12,7 +12,8 @@ module.exports = {
 
         res.render("products/productDetail", {
             productoSolicitado,
-            titulo: "Tea | Detalle de Producto"
+            titulo: "Tea | Detalle de Producto",
+            session:req.session
         })
     }
 }

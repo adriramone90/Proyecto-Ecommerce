@@ -26,26 +26,3 @@ De más esta decir que no es exclusivamente un sitio de la temática, pero sacam
 Nuestro público objetivo es aquel que esta interesado en aprender de sabores y culturas diferentes como, así también, quienes estén interesados en introducirse en la alimentación natural, rica y creativa.
 
 
-
-### INTEGRANTES DEL EQUIPO
-
-* Adrián González: 
-			
-            Me considero una persona tranquila, me gusta escuchar música en general y mi meta actual es terminar este curso, pero solo es el comienzo! 
-
-* Taiel Fernandez Jara: 
-			
-           Me considero una persona organizada, tengo como pasatiempo jugar videojuegos y dibujar, mi objetivo es ser un buen programador. 
-
-* Troche Alberto: 
-			
-           Me considero una persona entretenida, tengo como pasatiempo jugar futbol , mi objetivo es aprender a programar y vivir de eso. 
-
-* Ivana Saucedo: 
-			
-            Me considero una persona pacifica, autodidacta, en mis tiempos libres me gusta salir a caminar,conocer lugares, mi objetivo es aprender y poder demostar mis conocimientos con las herramientas que nos brindan.
-           
-
-### Link al tablero de trabajo en Trello.
-
-* [https://trello.com/b/rkgWebcJ/pi-grupo-12-comisi%C3%B3n-13](trello.com.ar "E-commerce de Té")

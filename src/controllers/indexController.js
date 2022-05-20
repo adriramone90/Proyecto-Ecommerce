@@ -7,7 +7,8 @@ module.exports = {
 
         res.render("index",{
             productos:getProducts,
-            titulo: "Tea | Tienda de té"
+            titulo: "Tea | Tienda de té",
+            session:req.session
         })
     }
 }

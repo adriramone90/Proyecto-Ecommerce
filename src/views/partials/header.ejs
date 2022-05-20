@@ -5,15 +5,33 @@
     </button>
     
     <nav class="nav-bar" id="menu">
+
+
         <ul class="li-container">
-            <li><a href=""><i class="fa-solid fa-piggy-bank"></i><p>Ofertas</p></a></li>
-            <li><a href=""><i class="fa-brands fa-product-hunt"></i><p>Productos</p></a></li>
-            <li><a href="/carrito"><i class="fa-solid fa-cart-arrow-down"></i><p>Mis compras</p></a></li>
-            <li><a href="/login"><i class="fa-solid fa-user"></i><p class="hidden">Iniciar Sesión</p></a></li>
-            <li><a href=""><i class="fa-solid fa-database"></i><p class="hidden">Mis Datos</p></a></li>
-            <li><a href="/register"><i class="fa-solid fa-address-card"></i><p class="hidden">Registrarse</p></a></li>
+            <li><a href=""><i class="fa-solid fa-piggy-bank"></i>Nuestros Productos</a></li>
+            <li><a href=""><i class="fa-brands fa-product-hunt"></i>Sobre Nosotros</a></li>
+
+            <% if (session.user) { %>
+                <li><a href="/carrito"><i class="fa-solid fa-cart-arrow-down"></i>Mi Carrito</a></li>
+                <li><a href=""><i class="fa-solid fa-user-pen"></i>Mi Perfil</a></li>
+                <li><a href="/logout"><i class="fa-solid fa-arrow-right-to-bracket"></i></i>Cerrar Sesión</a></li>
+                <div class="avatar-container">
+                    <img class="avatar" src="/img/users/<%=session.user.avatar%>" alt="">
+                    <% if (typeof session.user != "undefined") { %>
+                        <div class="user-online"></div>
+                    <% } %>
+                    
+                </div>
+            <% } else {%>
+                <li><a href="/login"><i class="fa-solid fa-user"></i>Iniciar Sesión</a></li>
+                <li><a href="/register"><i class="fa-solid fa-address-card"></i>Registrarse</a></li>
+            <% } %> 
+            
+            
             
         </ul>
+        
+        
     </nav>
     
     <a href="/" class="logo-container"><img src="/img/Logo.png" alt="Logo" class="img-header"></a>

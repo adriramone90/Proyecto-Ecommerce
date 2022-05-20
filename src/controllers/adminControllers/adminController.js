@@ -5,7 +5,8 @@ module.exports = {
         res.render("admin/indexAdmin",{
             titulo: "Administrador de productos",
             postHeader: "Lista de Productos",
-            productos: getProducts
+            productos: getProducts,
+            session:req.session
         })
     }
 }
